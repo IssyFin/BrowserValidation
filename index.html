@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Practice</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <span class="formTitle">Please enter your information:</span>
+        <label for="email">Email: </label>
+        <input id="email" name="email" type="email" aria-label="email" placeholder = "Marshmallow2@aol.com" required>
+        <div id="emailError" class="errorMessage hidden"></div>
+        <label for="country">Country: </label>
+        <input id="country" name="country" type="text" aria-label="country" placeholder="Peru" pattern="[A-za-z]*" minlength="4" required>
+        <div id="countryError" class="errorMessage hidden">Error</div>
+        <label for="zip">Zip Code: </label>
+        <input id="zip" name="zip" type="text" pattern="\d*" minlength="5" maxlength="5" aria-label="zip code" placeholder="01234" required>
+        <div id="zipError" class="errorMessage hidden"></div>
+        <label for="pass">Password: </label>
+        <input id="pass" name="password" type="password" aria-label="pass" minlength="8" placeholder="1234568" required>
+        <div id="passError" class="errorMessage hidden"></div>
+        <label for="confirmPass">Confirm Password: </label>
+        <input id="confirmPass" name="confirm" type="password" aria-label="confirm password" placeholder="12345678" required>
+        <div id="confirmError" class="errorMessage hidden"></div>
+        <button type="button" id="highfive">Submit</button>
+    </form>
+</body>
+</html>
